@@ -1,0 +1,203 @@
+﻿
+ 1. Düzgün və oxunaqlı CSS kodu yazmaq üçün lazım olabiləcək 10 qayda:
+ 
+1) Css - i yazmamışdan öncə bütün selektorların qiymətini sıfırlamaq (RESET).
+2) Uzun selektorlar brauzeri məcbur edir ki bir necə dəfə DOM elementlərinə müraciət etsin və orada oxşarlıqları axtarsın. Selektorları daha konkret adlandırmaqla bu problemi həll etmək olar. 
+
+------------------------------------ Məsələn:------------------------------------
+----------- Əvvəl -----------
+div#wrapper div#maincontent div#sidebar {
+	background: #fff url(bg.png) repeat-x 0 0;
+	border: 1px solid #ff0; 
+	font: normal 1.33em/1.33 Georgia, serif; 
+}
+
+----------- Sonra -----------
+#sidebar {
+     background: #fff url(bg.png) repeat-x 0 0;
+     border: 1px solid #ff0; 
+     font: normal 1.33em/1.33 Georgia, serif;
+}
+
+--------------------------------------------------------------------------------------
+3) Mümkün qədər hər yerdə CSS xüsussiyyətlərin adlarını qısa yazmaq.
+
+------------------------------------ Məsələn:------------------------------------
+----------- Əvvəl -----------
+#sidebar {
+      background-color: #fff ; 
+      background-image: (bg.png) ; 
+      background-position: 0 0 ; 
+      background-repeat: repeat-x ; 
+      border-width: 1px ; 
+      border-style: solid ; 
+      border-color: #ffff00 ; 
+}
+
+----------- Sonra -----------
+#sidebar {
+     background: #fff url(bg.png) repeat-x 0 0;
+     border: 1px solid #ff0; 
+}
+
+--------------------------------------------------------------------------------------
+
+4) CSS kodu yazarkən birsətirli və çoxsətirli usuldan istifadə etmək. Birsətirli - 3 selektordan çox olmamaq şərti illə.
+
+------------------------------------ Məsələn:------------------------------------
+
+div#header { float: left; width: 100%; } 
+
+div#header div.column {
+	border-right: 1px solid #ccc;
+	float: right;
+	margin-right: 50px;
+	padding: 10px;
+	width: 300px;
+}
+
+--------------------------------------------------------------------------------------
+
+5) Selektor xüsusiyyətlərinin adlarını əlifba ardıcıllığı ilə yazmaq.
+
+------------------------------------ Məsələn:------------------------------------
+
+div#header h1 {
+    border-bottom: 1px solid #dedede;
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+    margin-right: 48px;
+    position: relative;
+    z-index: 101;
+}
+
+--------------------------------------------------------------------------------------
+
+6) Elementləri, klassları bloklara görə və ya funksiyanallığına görə qruplaşdlrmaq.
+
+------------------------------------ Məsələn:------------------------------------
+
+/*****Reset*****/
+Remove margin and padding from elements
+
+/*****Basic Elements*****/
+Define styles for basic elements: body, h1-h6, ul, ol, a, p, etc.
+
+/*****Generic Classes*****/
+Define styles for simple things like floating to the sides, removing a bottom margin on elements, etc
+Yes, these may not be as semantic as we would all like, but they are necessary for coding efficiently 
+
+/*****Basic Layout*****/
+Define the basic template: header, footer, etc. Elements that help to define the basic layout of the site
+
+/*****Header*****/
+Define all elements in the header
+
+/*****Content*****/
+Define all elements in the content area
+
+/*****Footer*****/
+Define all elements in the footer
+
+/*****Etc*****/
+Continue to define the other sections one by one
+
+--------------------------------------------------------------------------------------
+
+7) Həmişə ilk öncə HTML qurulmalıdır sonra CSS tərtib olunmalıdır
+8) Hər hansı bir xüsusiyyəti  söndürmək üçün (x-) prefiksindən istifadə etmək olar.
+ 
+------------------------------------ Məsələn:------------------------------------
+
+.social a { 
+    -moz-transition: opacity 0.3s ease 0s; 
+    x-display: block; 
+    height: 35px; 
+    opacity: 0.4; 
+}
+
+--------------------------------------------------------------------------------------
+
+9) Hər hansı bir müvəqqəti və ya test üçün nəzərdə tutulan xüsusiyyətləri ayırmaq üçün boşluqdan istifadə etmək
+
+------------------------------------ Məsələn:------------------------------------
+
+.searchform > .searchsubmit { 
+	width: 14%; 
+	height: 25px; 
+	background: transparent url(images/icon_magnify.png) 0 0 no-repeat; 
+	  margin: -2px 0 0 0; 
+
+} 
+
+--------------------------------------------------------------------------------------
+
+10) CSS xüsusiyyətlərinin təkrarlanmasının qarşısını almaq.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Font Awesome kimi ikon fontları varmı? Varsa qisaca haqlarinda məlumat verin.
+
+Ümumiyyətlə ikon fontlar veb proqramçıların işini asanlaşdırmaq və saytın həcmini azaldmaq üçün nəzərdə tutulub. Ən çox istifadə olan ikon fontlardan biri  "Awesome" adlanan fontdur. Bu fontun istifadəsi pulsuzdur və tərkibində 634 ikon var. Bundan əlavə başqa bu kimi fontlar var. Onlar bu fontlardır:
+
+1) "Pictonic" fontu.
+Rəsmi saytı: pictonic.co.
+Umumi ikonların sayı: 3 000 yaxın.
+Pulsuz ikonların sayı: 350 yaxın.
+Hər ikonun qiyməti -- 20-25 RUR
+
+2)"Open Iconic" fontu.
+Rəsmi saytı: useiconic.com
+Umumi ikonların sayı: 220 ikon
+Hamısı pulsuzdur
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3 Azərbaycan şriftlərini dəstəkləyən 10 ədəd font ailəsinin adını və istifadə qaydasını yazın.
+
+Azərbaycan dilini dəstəkləyən fontların sayı məhduddur. Yəni cəmi 174 ədəddir. Bunlardan 10 ədədini aşağıda qeyd edəcəm:
+
+1) Algerian 
+2) Barmeno 
+3) Callista
+4) Dekorativ
+5) Europe
+6) Future
+7) Gothem
+8) HalveticaNeuCondensed
+9) İmpact
+10) Karikatur
+
+Fontlardan istifadə qaydaları:
+Fontlardan iki cür yararlanmaq olar. Birinci qayda:
+Fontun linkini tapib HTML sənədin <head> taqının daxilində yazmaq
+
+------------------------------------ Məsələn:------------------------------------
+
+< head>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+   <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+      }
+    </style>
+</head>
+--------------------------------------------------------------------------------------
+ Ikinci qayda:
+Azərbaycan dilini dəstəkləyən fontu "www.fontlar.info" saytından yuklədikdən sonra (fonts) adlı qovluğun daxılınə yerləşdirdikdən sonra aşağıda göstərilən qayda ilə istifadə edirik
+------------------------------------ Məsələn:------------------------------------
+[css]
+
+@font-face{
+        font-family: Algerian;
+        src: url (../fonts/algerian.ttf);
+}
+
+--------------------------------------------------------------------------------------
+        
+
+
+
+
+
